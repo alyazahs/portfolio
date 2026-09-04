@@ -8,7 +8,7 @@ import GithubLight from './Github-Light.svg';
 import HTML from './HTML.svg';
 import JavaLight from './Java-Light.svg';
 import JavaScript from './JavaScript.svg';
-import Python from './Python.svg';
+import Python from './python.svg';
 import SQLite from './SQLite.svg';
 import NodeJSLight from './NodeJS-Light.svg';
 import NotionLight from './Notion-Light.svg';
