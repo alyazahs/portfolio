@@ -9,7 +9,7 @@ import HTML from './HTML.svg';
 import JavaLight from './Java-Light.svg';
 import JavaScript from './JavaScript.svg';
 import Python from './python.svg';
-import SQLite from './SQLite.svg';
+import SQLite from './sqlite.svg';
 import NodeJSLight from './NodeJS-Light.svg';
 import NotionLight from './Notion-Light.svg';
 import NpmLight from './Npm-Light.svg';
