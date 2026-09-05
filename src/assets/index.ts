@@ -15,7 +15,6 @@ const aboutMeJournal = aboutMeJournalPng;
 // Re-export all asset modules
 export * from './stars';
 export * from './stickers';
-export * from './project_icons';
 export * from './techstack';
 
 // Export main assets
