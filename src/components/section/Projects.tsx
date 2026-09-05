@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useDarkMode } from '../../contexts/DarkModeContext';
 import { useThemeColors } from '../../hooks/useThemeColors';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
-import { Code, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ExternalLink, Code, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
 import { socialLinks } from '../../config/socialLinks';
 import { lightStars, darkStars, specialStars } from '../../assets/stars';
 
@@ -226,33 +227,27 @@ const Projects = () => {
 
   // project data - these are the main cards
   const projects = [
-    {
-      title: "Digital Queue System",
-      description:
-        "An IoT-based digital queue management system using RFID E-KTP for registration and real-time queue announcements to improve administrative services.",
+   {
+      title: "Digital Queue Management System",
+      description: "An IoT-based queue management system integrating RFID E-KTP registration, automated ticket printing, Text-to-Speech announcements, and real-time queue updates for public administrative services.",
       technologies: ["React", "Python", "Flask", "SQLite", "Raspberry Pi", "RFID", "TTS"],
-      icon: null,
-      detailsUrl: "/projects/digital-queue-system",
+      detailsUrl: "/projects/DigitalQueue",
       githubUrl: socialLinks.repositories.projectOne
     },
 
    {
       title: "Hospital Management System",
-      description:
-        "A web-based hospital management system developed during my internship, featuring patient management, authentication, and administrative workflows.",
+      description: "A web-based hospital management system developed during my internship, featuring patient management, authentication, and administrative workflows.",
       technologies: ["Next.js", "Express.js", "MySQL", "Flutter"],
-      icon: null,
-      detailsUrl: "/projects/hospital-management-system",
+      detailsUrl: "/projects/HospitalManagement",
       githubUrl: socialLinks.repositories.projectTwo
     },
 
     {
       title: "Catalog Produk Batik Madura",
-      description:
-        "A web-based product catalog designed to showcase and promote traditional Madurese batik products through a simple and responsive interface.",
+      description: "A web-based product catalog designed to showcase and promote traditional Madurese batik products through a simple and responsive interface.",
       technologies: ["Laravel", "PHP", "MySQL", "JavaScript"],
-      icon: null,
-      detailsUrl: "/projects/catalog-produk-batik-madura",
+      detailsUrl: "/projects/CatalogProdukBatikMadura",
       githubUrl: socialLinks.repositories.projectThree
     }
   ];
@@ -453,12 +448,16 @@ const Projects = () => {
                 border: `1px solid ${themeColors.card.border}`
               }} aria-label={`${project.title} project`}>
                 <CardHeader>
-                  <CardTitle className="text-xl dark:text-gray-100 transition-colors group-hover:!text-pink-500 dark:group-hover:!text-pink-400">
-                    {project.title}
-                  </CardTitle>
-                  <CardDescription className="text-gray-600 dark:text-gray-300 mt-2">
-                    {project.description}
-                  </CardDescription>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-1">
+                      <CardTitle className="text-xl dark:text-gray-100 transition-colors group-hover:!text-pink-500 dark:group-hover:!text-pink-400">
+                        {project.title}
+                      </CardTitle>
+                      <CardDescription className="text-gray-600 dark:text-gray-300 mt-2">
+                        {project.description}
+                      </CardDescription>
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardContent style={{ display: 'flex', flexDirection: 'column' }}>
                   <div className="flex flex-wrap gap-2 mb-4" style={{ flex: '1 0 auto' }}>
@@ -475,6 +474,10 @@ const Projects = () => {
                     ))}
                   </div>
                   <div className="flex gap-3" style={{ marginTop: 'auto', paddingTop: '8px' }}>
+                    <Link to={project.detailsUrl} className="project-btn flex items-center gap-1" style={{ textDecoration: 'none', color: 'white' }} aria-label={`View ${project.title} project details`}>
+                      <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                      Details
+                    </Link>
                     <a href={project.githubUrl} className="project-btn-outline flex items-center gap-1" style={{ textDecoration: 'none' }} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} source code on GitHub`}>
                       <Code className="h-4 w-4" aria-hidden="true" />
                       Code
@@ -492,12 +495,16 @@ const Projects = () => {
                 opacity: 0.5
               }} aria-label="Coming soon project">
                 <CardHeader>
-                  <CardTitle className="text-xl" style={{ color: isDarkMode ? themeColors.colors.white : themeColors.colors.dark[600] }}>
-                    Coming Soon
-                  </CardTitle>
-                  <CardDescription className="text-gray-600 dark:text-gray-300 mt-2">
-                    More exciting projects on the way! Check back soon to see what I'm working on next.
-                  </CardDescription>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-1">
+                      <CardTitle className="text-xl" style={{ color: isDarkMode ? themeColors.colors.white : themeColors.colors.dark[600] }}>
+                        Coming Soon
+                      </CardTitle>
+                      <CardDescription className="text-gray-600 dark:text-gray-300 mt-2">
+                        More exciting projects on the way! Check back soon to see what I'm working on next.
+                      </CardDescription>
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardContent style={{ display: 'flex', flexDirection: 'column' }}>
                   <div className="flex flex-wrap gap-2 mb-4" style={{ flex: '1 0 auto' }}>
@@ -512,6 +519,10 @@ const Projects = () => {
                     </Badge>
                   </div>
                   <div className="flex gap-3 opacity-30" style={{ marginTop: 'auto', paddingTop: '8px' }}>
+                    <div className="project-btn flex items-center gap-1" style={{ pointerEvents: 'none' }}>
+                      <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                      Details
+                    </div>
                     <div className="project-btn-outline flex items-center gap-1" style={{ pointerEvents: 'none' }}>
                       <Code className="h-4 w-4" aria-hidden="true" />
                       Code
