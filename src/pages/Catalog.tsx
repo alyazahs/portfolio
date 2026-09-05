@@ -11,13 +11,13 @@ import ProjectOverview from '../components/project/ProjectOverview';
 import TechStack from '../components/project/TechStack';
 import TechnicalHighlights from '../components/project/TechnicalHighlights';
 
-import shot1 from '../assets/project_ss/rumah-batik-madura/1.png';
-import shot2 from '../assets/project_ss/rumah-batik-madura/2.png';
-import shot3 from '../assets/project_ss/rumah-batik-madura/3.png';
-import shot4 from '../assets/project_ss/rumah-batik-madura/4.png';
+// import shot1 from '../assets/project_ss/rumah-batik-madura/1.png';
+// import shot2 from '../assets/project_ss/rumah-batik-madura/2.png';
+// import shot3 from '../assets/project_ss/rumah-batik-madura/3.png';
+// import shot4 from '../assets/project_ss/rumah-batik-madura/4.png';
 
 const RumahBatikMadura = () => {
-  const images = [shot1, shot2, shot3, shot4];
+  const images = [""];
 
   return (
     <ProjectLayout>
