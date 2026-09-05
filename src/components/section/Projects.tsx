@@ -236,19 +236,27 @@ const Projects = () => {
     },
 
    {
-      title: "Hospital Management System",
-      description: "A web-based hospital management system developed during my internship, featuring patient management, authentication, and administrative workflows.",
-      technologies: ["Next.js", "Express.js", "MySQL", "Flutter"],
-      detailsUrl: "/projects/HospitalManagement",
+      title: "Hospital Management System - Web Application",
+      description: "A web-based hospital management system developed as a team project during my internship to support hospital operations, including patient management, medical records, doctor and clinic schedules, and other administrative processes.",
+      technologies: ["Next.js", "Express.js", "MySQL", "Rest API"],
+      detailsUrl: "/projects/HospitalWeb",
       githubUrl: socialLinks.repositories.projectTwo
     },
 
     {
-      title: "Catalog Produk Batik Madura",
+      title: "Class Fund Management",
+      description: "A web application designed to help students manage and monitor class funds, including payment tracking, member management, and financial overviews.",
+      technologies: ["React", "JavaScript", "Supabase", "LocalStorage"],
+      detailsUrl: "/projects/ClassFund",
+      githubUrl: socialLinks.repositories.projectThree
+    },
+
+    {
+      title: "Catalog Product Batik Madura",
       description: "A web-based product catalog designed to showcase and promote traditional Madurese batik products through a simple and responsive interface.",
       technologies: ["Laravel", "PHP", "MySQL", "JavaScript"],
       detailsUrl: "/projects/CatalogProdukBatikMadura",
-      githubUrl: socialLinks.repositories.projectThree
+      githubUrl: socialLinks.repositories.projectFour
     }
   ];
 
